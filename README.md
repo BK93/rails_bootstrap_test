@@ -35,3 +35,5 @@ app/assets/stylesheets/application.css
  *= require_self
  */
 ```
+
+## サンプルは app/views/layouts/application.html.erb参照
