@@ -13,7 +13,9 @@ $ cp /tmp/bootstrap-3.1.1-dist/js/bootstrap.min.js vendor/assets/javascripts/
 
 ### 3. application.jsとapplication.cssに追記
 
-```app/assets/javascripts/application.js
+app/assets/javascripts/application.js
+
+```
 // ...
 //= require jquery
 //= require jquery_ujs
@@ -21,7 +23,10 @@ $ cp /tmp/bootstrap-3.1.1-dist/js/bootstrap.min.js vendor/assets/javascripts/
 //= require bootstrap.min // ←追記
 //= require_tree .
 ```
-```app/assets/stylesheets/application.css
+
+app/assets/stylesheets/application.css
+
+```
 /*
  *
  * ...
