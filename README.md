@@ -1,17 +1,17 @@
 ## railsにbootstrap
 
-1. bootstrapのzipファイルをダウンロード
+### 1. bootstrapのzipファイルをダウンロード
 ```
 1. $ curl -o /tmp/bootstrap.zip -L https://github.com/twbs/bootstrap/releases/download/v3.1.1/bootstrap-3.1.1-dist.zip
 2. $ unzip /tmp/bootstrap.zip -d /tmp
 ```
-2. 展開が終わったらvendor/assets配下にcss/jsファイルを配置
+### 2. 展開が終わったらvendor/assets配下にcss/jsファイルを配置
 ```
 $ cp /tmp/bootstrap-3.1.1-dist/css/bootstrap.min.css vendor/assets/stylesheets/
 $ cp /tmp/bootstrap-3.1.1-dist/js/bootstrap.min.js vendor/assets/javascripts/
 ```
 
-3. application.jsとapplication.cssに追記
+### 3. application.jsとapplication.cssに追記
 
 ```app/assets/javascripts/application.js
 // ...
@@ -26,7 +26,7 @@ $ cp /tmp/bootstrap-3.1.1-dist/js/bootstrap.min.js vendor/assets/javascripts/
  *
  * ...
  *= require_tree .
- *= require bootstrap.min
+ *= require bootstrap.min /* 追記 */
  *= require_self
  */
 ```
