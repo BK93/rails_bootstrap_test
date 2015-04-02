@@ -36,4 +36,4 @@ app/assets/stylesheets/application.css
  */
 ```
 
-## サンプルは app/views/layouts/application.html.erb参照
+## サンプルは [app/views/layouts/application.html.erb](https://github.com/soyanchu/rails_bootstrap_test/blob/master/app/views/layouts/application.html.erb)参照
