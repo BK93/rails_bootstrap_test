@@ -1,4 +1,4 @@
-## railsにbootstrap
+## railsにbootstrapを入れる。
 
 ### 1. bootstrapのzipファイルをダウンロード
 ```
