@@ -1,28 +1,32 @@
-== README
+## railsにbootstrap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. bootstrapのzipファイルをダウンロード
+```
+1. $ curl -o /tmp/bootstrap.zip -L https://github.com/twbs/bootstrap/releases/download/v3.1.1/bootstrap-3.1.1-dist.zip
+2. $ unzip /tmp/bootstrap.zip -d /tmp
+```
+2. 展開が終わったらvendor/assets配下にcss/jsファイルを配置
+```
+$ cp /tmp/bootstrap-3.1.1-dist/css/bootstrap.min.css vendor/assets/stylesheets/
+$ cp /tmp/bootstrap-3.1.1-dist/js/bootstrap.min.js vendor/assets/javascripts/
+```
 
-Things you may want to cover:
+3. application.jsとapplication.cssに追記
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```app/assets/javascripts/application.js
+// ...
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require bootstrap.min // ←追記
+//= require_tree .
+```
+```app/assets/stylesheets/application.css
+/*
+ *
+ * ...
+ *= require_tree .
+ *= require bootstrap.min
+ *= require_self
+ */
+```
